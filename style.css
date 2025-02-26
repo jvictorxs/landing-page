@@ -1,155 +1,236 @@
 *{
-  padding: 0px;
   margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-text-home-e-nav: #555;
+  --color-text-dark: #111;
+  --color-text-white: #f9f6ee;
+  --color-background-white: #f5f5f5;
+}
+
+body {
+  background: var(--color-background-white);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 p {
+  color: var(--color-text-dark);
   line-height: 1.5rem;
 }
-/* --------- header -------- */
-.header {
-  background: #f5f5f5;
-  display: grid;
-  justify-content: end;
-  padding-right: 50px;
+.home,
+.about,
+.meta,
+.projeto {
+  margin: 0px 30px;
+  text-align: justify;
 }
 
-.item2 a{
-  display: inline-block;
-  padding: 30px;
-  text-decoration: none;
-  color: #111;
+header, main {
+  padding: 0px 50px;
 }
-/* --------- home ----------- */
+
+/* ------------------MENU--------------------- */
+
+.menu ul{
+  display: flex;
+  justify-content: end;
+  padding-top: 30px;
+}
+
+.menu li{
+  margin: 0px 10px;
+}
+
+.menu a{
+  color: var(--color-text-home-e-nav);
+  border-radius: 3px;
+  padding: 15px;
+  transition: background 1s, color 0.3s;
+}
+
+.menu a:hover{
+  background: var(--color-text-dark);
+  color: var(--color-background-white);
+}
+
+/* ---------------HOME ---------------- */
+
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 200px 50px 200px 50px;
-  background: #f5f5f5;
   gap: 50px;
+  justify-content: center;
+  padding: 150px 0px;
 }
 
-.apresentacao {
-  padding: 30px;
+.home div{
+  display: grid;
+  place-content: center;
 }
 
-.apresentacao p{
-  margin-top: 30px;
-  color: #888;
+.home h1 {
+  padding-bottom: 30px;
 }
 
-.imagem-apresentacao{
+.home p{
+  color: var(--color-text-home-e-nav);
+}
+
+.home img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/* ---------------about------------------------ */
+
+.about {
+  /* background: #f8f8ff; */
+  padding: 100px 0px;
+}
+.about h2{
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.about div{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about img{
+  justify-self: start;
+  border-radius: 5px;
+  object-fit: cover;
+  width: 400px;
+}
+
+.about p{
+  align-self: center;
+}
+
+/* ----------------projeto--------------------- */
+.projeto{
   display: grid;
   justify-content: center;
 }
-
-.imagem-apresentacao img{
-  width: 700px;
-  border-radius: 10px;
+.projeto h2{
+  text-align: center;
+  padding: 50px 0px;
 }
 
-.buttom {
-  display: grid;
-  grid-template-columns: auto auto;
-  place-content: center;
-  margin-top: 30px;
+.wrapper {
+  display: flex;
+  width: 1067px;
+  height: 615px;
+  padding-bottom: 30px;
+  /* overflow: hidden; */
 }
 
-.buttom a {
-  margin-right: 50px;
-  padding: 20px;
-  text-decoration: none;
-}
-
-.buttom a:first-child{
-  border: 1px solid black;
-  border-radius: 3px;
-  color: #111;
-}
-
-.buttom a:last-child{
+.card1{
   background: #111;
-  border: 1px solid black;
-  border-radius: 3px;
-  color: #f5f5f5;
+}
+.card2{
+  background: #222;
+}
+.card3{
+  background: #333;
+}
+.card4{
+  background: #555;
+}
+.card5{
+  background: #777;
+}
+.card6{
+  background: #999;
 }
 
-/* -------------about---------------- */
-
-.about {
-  text-align: center;
-  padding: 70px;
+.card{
+  flex: 1;
+  transition: flex 0.5s ease;
+  cursor: pointer;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 70px 0px;
+.card:hover{
+  flex: 4;
 }
 
-.img-about img{
-  max-width: 500px;
-  clip-path: circle(50%);
-}
 
-.textoP {
-  display: grid;
-  padding-right: 100px;
-}
+/* -------------------footer------------------- */
 
-.textoP p{
-  text-align: justify;
-}
-
-/* ---------------- objetivo ----------------- */
-
-.objective {
-  background: #f5f5f5;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 100px 0px;
-  text-align: center;
-}
-
-.objective-texto {
-  display: grid;
-  padding-left: 100px;
-}
-
-.objective-texto p{
-  text-align: justify;
-}
-
-.objective-img img {
-  max-width: 900px;
-  clip-path: circle(40%);
-}
-
-/* ----------------- projetos ------------------ */
-
-.projects {
-  text-align: center;
-  padding: 100px 200px;
-}
-
-.projects h2 {
-  padding-bottom: 100px;
-}
-
-.projects p {
-  text-align: justify;
-}
-
- /* ---------------- footer ------------------ */
- 
-footer {
+footer{
   display: grid;
   grid-template-rows: auto auto;
   gap: 3px 0px;
-  background: #f5f5f5;
   text-align: center;
   padding: 15px 0px;
+  background: #999;
+}
+.footer-links img{
+  width: 48px;
+}
+
+
+/* ------------------ipad---------------------- */
+@media (max-width: 800px) {
+  main {
+    padding: 0px 5px;
+
+  }
+  .menu ul{
+    justify-content: center;
+  }
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .home div{
+    padding: 0px;
+  }
+  .about img{
+    width: 100%;
+  }
+  .wrapper {
+    width: 600px;
+    height: 200px;
+  }
+}
+
+
+/* ----------------celular-------------------- */
+@media (max-width: 450px) {
+  .menu ul{
+    justify-content: center;
+  }
+  .menu li {
+    margin: 0px 5px;
+  }
+  .menu a{
+    padding: 10px;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about div{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    clip-path: circle(45%);
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 300px;
+    height: 150px;
+  }
 }
